@@ -1,0 +1,1 @@
+{"version":3,"file":"botStatus.d.ts","sourceRoot":"","sources":["../../../src/generated/types/botStatus.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AACH,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,cAAc,CAAC;AAE/C,MAAM,WAAW,SAAS;IACxB,OAAO,EAAE,MAAM,CAAC;IAChB,YAAY,EAAE,MAAM,CAAC;IACrB,KAAK,EAAE,UAAU,EAAE,CAAC;IACpB,SAAS,EAAE,MAAM,CAAC;CACnB"}

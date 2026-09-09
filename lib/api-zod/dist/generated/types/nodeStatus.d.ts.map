@@ -1,0 +1,1 @@
+{"version":3,"file":"nodeStatus.d.ts","sourceRoot":"","sources":["../../../src/generated/types/nodeStatus.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,WAAW,UAAU;IACzB,EAAE,EAAE,MAAM,CAAC;IACX,IAAI,EAAE,MAAM,CAAC;IACb,MAAM,EAAE,OAAO,CAAC;IAChB,gBAAgB;IAChB,SAAS,EAAE,MAAM,GAAG,IAAI,CAAC;IACzB,gBAAgB;IAChB,OAAO,EAAE,MAAM,GAAG,IAAI,CAAC;CACxB"}

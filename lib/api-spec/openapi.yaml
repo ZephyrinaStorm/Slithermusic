@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: bot
+    description: Dragon's Den bot status
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /bot/status:
+    get:
+      operationId: getBotStatus
+      tags: [bot]
+      summary: Get bot and node status
+      description: Returns live Lavalink node connectivity and static bot info
+      responses:
+        "200":
+          description: Bot status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BotStatus"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    NodeStatus:
+      type: object
+      properties:
+        id:
+          type: string
+        host:
+          type: string
+        online:
+          type: boolean
+        latencyMs:
+          type: ["integer", "null"]
+        version:
+          type: ["string", "null"]
+      required:
+        - id
+        - host
+        - online
+        - latencyMs
+        - version
+    BotStatus:
+      type: object
+      properties:
+        botName:
+          type: string
+        commandCount:
+          type: integer
+        nodes:
+          type: array
+          items:
+            $ref: "#/components/schemas/NodeStatus"
+        checkedAt:
+          type: string
+      required:
+        - botName
+        - commandCount
+        - nodes
+        - checkedAt
