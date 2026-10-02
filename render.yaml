@@ -1,0 +1,14 @@
+services:
+  - type: worker
+    name: slither-music-bot
+    runtime: node
+    plan: starter
+    buildCommand: corepack enable && pnpm install --filter @workspace/music-bot... --frozen-lockfile --ignore-scripts && pnpm --filter @workspace/music-bot run typecheck
+    startCommand: pnpm --filter @workspace/music-bot run start
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DISCORD_CLIENT_ID
+        sync: false
